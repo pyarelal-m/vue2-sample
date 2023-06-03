@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vue JS 2 Tutorial #5 - Events</title>
+    <title>Vue JS 2 Tutorial #6 - Event Modifiers</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
     <link href="style.css" rel="stylesheet"></link>
@@ -12,12 +12,13 @@
 <body>
     <div id="app">
         <p>Events</p>
-        <button v-on:click="add(1)">Add A year</button>
+        <button v-on:click.once="add(1)">Add A year</button>
         <button v-on:click="sub(1)">Sub A year</button>
         <button v-on:dblclick="add(10)">Add 10 year</button>
         <button v-on:dblclick="sub(10)">Sub 10 year</button>
         <p>My Age is {{age }}</p>
         <div id="canvas" v-on:mousemove="updateXy">{{x}}, {{y}}</div>
+        <a v-on:click.prevent="click" href="gg.com">gg.com</a>
     </div>
     <script src="app.js"></script>
 </body>

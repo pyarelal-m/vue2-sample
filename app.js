@@ -16,6 +16,9 @@ var app = new Vue({
             // console.log(event);
             this.x = event.offsetX;
             this.y = event.offsetY;
+        },
+        click: function() {
+            alert("helo");
         }
     }
 });
