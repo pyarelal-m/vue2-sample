@@ -11,14 +11,11 @@
 </head>
 <body>
     <div id="app">
-        <p>Events</p>
-        <button v-on:click.once="add(1)">Add A year</button>
-        <button v-on:click="sub(1)">Sub A year</button>
-        <button v-on:dblclick="add(10)">Add 10 year</button>
-        <button v-on:dblclick="sub(10)">Sub 10 year</button>
-        <p>My Age is {{age }}</p>
-        <div id="canvas" v-on:mousemove="updateXy">{{x}}, {{y}}</div>
-        <a v-on:click.prevent="click" href="gg.com">gg.com</a>
+        <h1>Keyboard Events</h1>
+        <label for="name">name</label>
+        <input type="text" name="name" id="name" v-on:keyup.enter="logName">
+        <label for="age">age</label>
+        <input type="text" name="age" id="age" v-on:keyup.alt.enter="logAge">
     </div>
     <script src="app.js"></script>
 </body>
