@@ -1,16 +1,22 @@
 var app = new Vue({
     el: '#app',
     data: {
-        name:'',
-        age:'',
-        
+        age:20,
+        a:0,
+        b:0
     },
     methods: {
-        logName: function() {
-            console.log("you entered your name");
+        
+    },
+    computed: {
+        addToA: function() {
+            console.log('add to a');
+            return this.age+this.a;
         },
-        logAge: function() {
-            console.log("you entered your age");
+        addToB: function() {
+            console.log('add to b');
+
+            return this.age+this.b;
         }
     }
 });
